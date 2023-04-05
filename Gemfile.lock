@@ -114,6 +114,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     execjs (2.8.1)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw32)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
@@ -185,7 +186,11 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x64-mingw32)
       racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.6)
+    pg (1.4.6-x64-mingw32)
     popper_js (2.11.6)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -236,6 +241,8 @@ GEM
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -256,6 +263,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2-x64-mingw32)
+    sqlite3 (1.6.2-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
@@ -302,6 +310,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   selenium-webdriver
