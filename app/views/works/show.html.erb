@@ -1,0 +1,96 @@
+   <div class="container-fluid">
+        <main class="tm-main">   
+        <div class="row tm-row">
+                <div class="col-12">              
+                    <a href="<%= root_path %>" class="tm-color-primary"><i class="fa fa-angle-left" aria-hidden="true"></i> К вакансиям</a>                             
+                </div>                
+            </div>                    
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <!-- Video player 1422x800 -->
+                    <img src="<%= @work.img %>" alt="Image" class="img-fluid tm-mb-40">  
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">                    
+                        <div class="mb-4">
+                            <h2 class="pt-2 tm-color-primary tm-post-title"><%= @work.name %></h2>
+                            <p class="tm-mb-40"><%= @work.salary %></p>
+                            <p class="trix-content ">
+                                <%= @work.description %>
+                            </p>
+                        </div>
+                        
+                        <!-- Comments -->
+                        <div >
+                            <p class="tm-mb-45"></p>
+                            <h2 class="tm-color-primary tm-post-title">Как откликнуться? </h2>
+                            <hr class="tm-hr-primary tm-mb-45">
+                            <div class="tm-comment tm-mb-45">
+          
+                                <div>
+                                    <p>
+                                        Вы можете оставить свои данные на оформление отклика по вакансий нашему менеджеру или <span class="tm-color-primary"><a href="<%= @work.link %>">отправить отклик вручную.</a></span>
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                    </div>                                                 
+                                </div>                                
+                            </div>
+                            <div class="tm-comment-reply tm-mb-45">
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-lg-4 tm-aside-col">
+                    <div class="tm-post-sidebar">
+        
+                        <h2 class="tm-color-primary tm-post-title">Оставьте отклик:</h2>
+                        <hr class="tm-hr-primary tm-mb-45">
+                        <%= form_with(model: @new_reponse) do |form| %>
+                            <% if @new_reponse.errors.any? %>
+                            <div style="color: red">
+                                <h2><%= pluralize(new_reponse.errors.count, "error") %> prohibited this new_reponse from being saved:</h2>
+
+                                <ul>
+                                <% new_reponse.errors.each do |error| %>
+                                    <li><%= error.full_message %></li>
+                                <% end %>
+                                </ul>
+                            </div>
+                            <% end %>
+
+                            <div class="mb-4">
+                                <%= form.text_field :name, class: "form-control", placeholder: 'ФИО'%>
+                            </div>
+
+                            <div class="mb-4">
+                                <%= form.text_field :phone, class: "form-control", placeholder: 'Номер телефона' %>
+                            </div>
+
+                            <div class="mb-4">
+                                <%= form.text_field :vk, class: "form-control", placeholder: 'Ссылка на профиль вк' %>
+                            </div>
+
+                            <div class="mb-4">
+                                <%= form.text_field :name_work, class: "form-control", value: @work.name %>
+                            </div>
+
+                            <div class="mb-4">
+                                <%= form.submit 'Отправить', class: 'tm-btn tm-btn-primary tm-btn-small'%>
+                            </div>
+                        <% end %>
+                    </div>                    
+                </aside>
+            </div>
+            <footer class="row tm-row">
+                <div class="col-md-6 col-12 tm-color-gray">
+                   <a rel="nofollow" target="_parent" href="<%= root_path %>" class="tm-external-link">PartnerWork</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2023
+                </div>
+            </footer>
+        </main>
+    </div>

@@ -1,0 +1,2 @@
+class NewReponse < ApplicationRecord
+end
