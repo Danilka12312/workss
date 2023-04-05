@@ -77,6 +77,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem :production do 
-  gem 'pg'
-end
+gem 'pg'
