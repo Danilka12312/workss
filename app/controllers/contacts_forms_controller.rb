@@ -8,11 +8,10 @@ class ContactsFormsController < ApplicationController
   def create
     @new_form = ContactsForm.new(contacts_form_params)
 
-    respond_to do |format|
-      if @new_form.save
-        
-      else
-      end
+    if @new_form.save
+      redirect_to "/home/form_true"
+    else
+
     end
   end
 

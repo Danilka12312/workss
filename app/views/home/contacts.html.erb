@@ -11,7 +11,7 @@
 
                 </div>
                 <div class="col-lg-7 tm-contact-left">
-
+                    <h2>
                     <%= form_with(model: @contacts_form) do |form| %>
                       <% if @contacts_form.errors.any? %>
                         <div style="color: red">
@@ -24,6 +24,7 @@
                           </ul>
                         </div>
                       <% end %>
+                      </h2>
 
                       <p сlass="form-group row mb-4 mb-my">
                         <div class="col-sm-11">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Партнёры | <%= @city %></title>
+    <title>Partner Works <%=@city %></title>
     <%= javascript_importmap_tags %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -23,8 +23,8 @@
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="tm-site-header">        
-                <h1 class="text-center">Partner</h1>
+            <div class="tm-site-header header__logo_center">        
+                <%= image_tag("logo.svg", :class => "header-logo") %>
             </div>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>

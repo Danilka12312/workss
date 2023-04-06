@@ -1,18 +1,25 @@
 class HomeController < ApplicationController
   def chelyabinsk
     @works = Work.all
-    @city = 'PW'
+    @city = ''
     @home_active = 'active'
   end
 
   def about
-    @city = 'О нас'
+    @city = ' | О нас'
     @about_active = 'active'
   end
 
   def contacts
-    @city = 'Контакты'
+    @city = '| Контакты'
     @contacts_active = 'active'
     @contacts_form = ContactsForm.new
+  end
+
+  def reponse_true
+  end
+
+  def form_true
+    
   end
 end
