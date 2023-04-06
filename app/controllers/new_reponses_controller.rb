@@ -1,10 +1,6 @@
 class NewReponsesController < ApplicationController
   before_action :set_new_reponse, only: %i[ show ]
-
-  def index
-    redirect_to '/home/about'
-  end
-
+  
   def new
     @new_reponse = NewReponse.new
   end

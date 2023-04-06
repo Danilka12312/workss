@@ -6,9 +6,9 @@ class ContactsFormsController < ApplicationController
   end
 
   def create
-    @new_form = ContactsForm.new(contacts_form_params)
+    @contacts_form = ContactsForm.new(contacts_form_params)
 
-    if @new_form.save
+    if @contacts_form.save
       redirect_to "/home/form_true"
     else
 

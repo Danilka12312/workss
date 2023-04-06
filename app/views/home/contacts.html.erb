@@ -13,17 +13,6 @@
                 <div class="col-lg-7 tm-contact-left">
                     <h2>
                     <%= form_with(model: @contacts_form) do |form| %>
-                      <% if @contacts_form.errors.any? %>
-                        <div style="color: red">
-                          <h2><%= pluralize(@contacts_form.errors.count, "error") %> prohibited this @contacts_form from being saved:</h2>
-
-                          <ul>
-                            <% @contacts_form.errors.each do |error| %>
-                              <li><%= error.full_message %></li>
-                            <% end %>
-                          </ul>
-                        </div>
-                      <% end %>
                       </h2>
 
                       <p сlass="form-group row mb-4 mb-my">
