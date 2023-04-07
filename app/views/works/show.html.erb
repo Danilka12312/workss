@@ -48,7 +48,7 @@
         
                         <h2 class="tm-color-primary tm-post-title">Оставьте отклик:</h2>
                         <hr class="tm-hr-primary tm-mb-45">
-                        <%= form_with(model: @new_reponse) do |form| %>
+                        <%= form_with(model: [@new_reponse]) do |form| %>
                             <% if @new_reponse.errors.any? %>
                             <div style="color: red">
                                 <h2><%= pluralize(new_reponse.errors.count, "error") %> prohibited this new_reponse from being saved:</h2>

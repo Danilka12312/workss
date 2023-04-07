@@ -7,11 +7,13 @@ class ContactsFormsController < ApplicationController
 
   def create
     @contacts_form = ContactsForm.new(contacts_form_params)
+    @contacts_active = 'active'
+    @city = '| Контакты'
 
     if @contacts_form.save
       redirect_to "/home/form_true"
     else
-
+      render "home/contacts"
     end
   end
 

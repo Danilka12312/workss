@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    attributes:
+      contacts_form:
+        name: "Поле 'Имя' "
+        email: "Поле 'Email' "
+        theme: "Поле 'Тема' "
+        message: "Поле 'Сообщение' "

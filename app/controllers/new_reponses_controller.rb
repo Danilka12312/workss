@@ -7,11 +7,10 @@ class NewReponsesController < ApplicationController
 
   def create
     @new_reponse = NewReponse.new(new_reponse_params)
-
     if @new_reponse.save
       redirect_to "/home/reponse_true"
     else
-      
+      redirect_to ""
     end
   end
 
