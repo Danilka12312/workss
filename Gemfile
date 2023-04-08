@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
 gem 'bootstrap'
 
+gem 'phonelib'
+
 gem 'rails-i18n'
 
 gem 'jquery-rails'
