@@ -16,7 +16,7 @@ gem 'jquery-rails'
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "pg"
+gem "sqlite3", "~> 1.4"
 
 gem 'activeadmin'
 
